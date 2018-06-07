@@ -1,4 +1,11 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    echo 'Hello world'
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
 }
